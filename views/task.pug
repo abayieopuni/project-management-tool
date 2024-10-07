@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Task: Sample Task
+  p Status: In Progress
+  form
+    select
+      option Incomplete
+      option In Progress
+      option Complete
+    button(type="submit") Update Status

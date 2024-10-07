@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title Project Management Tool
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="/stylesheets/style.css")
+    link(rel="stylesheet" href="/stylesheets/modal-style.css")
+  body
+    header
+      nav.navbar
+        a.logo(href="/") ProjectManager
+        ul.nav-links
+          li: a(href="/") Home
+          li: a(href="/projects") Projects
+          if !session.userId
+            li: a(href="/login") Login 
+            li: a(href="/register") Register
+          else 
+            li: a(href="/dashboard") Dashboard
+            if session.role === "admin"
+              li: a(href="/admin") Admin 
+            li: a(href="/logout") Logout
+          li: a(href="/about") About
+          li: a(href="/profile") Profile
+    main
+      block content
+    footer
+      p &copy; 2024 Project Management Tool. All rights reserved.
+    script(src="/js/main.js")

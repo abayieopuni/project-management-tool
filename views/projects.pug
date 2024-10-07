@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  section.project-header
+    h1 Project: Sample Project
+    button(onclick="showCreateTaskModal()") Add New Task
+
+  section.tasks
+    ul
+      li Task 1 - Assigned to John
+      li Task 2 - Assigned to Jane
+      li Task 3 - Assigned to Bob
+
+  // Modal for creating a new task
+  div#taskModal.modal.hidden
+    div.modal-content
+      span.close(onclick="hideCreateTaskModal()") &times;
+      h2 Add New Task
+      form(action="/projects/:id/tasks" method="POST")
+        input(type="text" name="taskTitle" placeholder="Task Title" required)
+        input(type="text" name="assignedTo" placeholder="Assign To" required)
+        button(type="submit") Add Task

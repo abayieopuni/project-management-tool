@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  section.intro
+    h1 Welcome to Project Management Tool
+    p Manage your projects, tasks, and teams in one place.
+    button(onclick="showCreateProjectModal()") Start a New Project
+
+  // Modal for creating a new project
+  div#projectModal.modal.hidden
+    div.modal-content
+      span.close(onclick="hideCreateProjectModal()") &times;
+      h2 Create a New Project
+      form(action="/projects" method="POST")
+        input(type="text" name="projectName" placeholder="Enter Project Name" required)
+        button(type="submit") Create Project
