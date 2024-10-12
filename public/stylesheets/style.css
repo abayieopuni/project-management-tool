@@ -1,71 +1,129 @@
 /* Global Styles */
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  line-height: 1.6;
-  padding: 0 20px;
 }
 
-/* Navigation Bar */
-nav {
-  background-color: #333;
-  padding: 10px;
-}
-
-nav ul {
-  list-style: none;
+header {
+  background-color: #1a73e8;
+  padding: 10px 20px;
+  color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-nav ul li {
-  margin-right: 20px;
-}
-
-nav ul li a {
+nav a.logo {
+  font-size: 24px;
+  font-weight: bold;
   color: white;
   text-decoration: none;
-  padding: 8px 16px;
 }
 
-nav ul li a:hover {
-  background-color: #555;
-  border-radius: 4px;
+.nav-links {
+  list-style: none;
+  display: flex;
 }
 
-/* Introduction Section */
-.intro {
-  text-align: center;
-  margin-top: 50px;
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .intro h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+  font-size: 36px;
+  color: #1a73e8;
 }
 
 .intro p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
 }
 
-button {
-  background-color: #28a745;
+.intro button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1a73e8;
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 1em;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.intro button:hover {
+  background-color: #135abc;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
 
-button:hover {
-  background-color: #218838;
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #135abc;
+}
+
+.login p {
+  margin-top: 10px;
+}
+
+.login a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
 }

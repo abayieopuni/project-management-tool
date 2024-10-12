@@ -12,5 +12,7 @@ block content
       span.close(onclick="hideCreateProjectModal()") &times;
       h2 Create a New Project
       form(action="/projects" method="POST")
-        input(type="text" name="projectName" placeholder="Enter Project Name" required)
+        div.form-group
+          label(for="projectName") Project Name
+          input(type="text" name="projectName" placeholder="Enter Project Name" required)
         button(type="submit") Create Project
