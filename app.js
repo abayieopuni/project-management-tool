@@ -13,7 +13,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 const mongoose = require("mongoose");
 mongoose.set("strictQuery",false);
-const mongoDB = "mongodb+srv://abayieremi:Remi0544@cluster0.cjbpl.mongodb.net/project_manager?retryWrites=true&w=majority&appName=Cluster0 ";
+const mongoDB = "will input";
 
 main().catch((err)=> console.log(err));
 async function main(){
