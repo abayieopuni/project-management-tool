@@ -5,19 +5,19 @@ html
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     link(rel="stylesheet" href="/stylesheets/style.css")
-    link(rel="stylesheet" href="/stylesheets/modal-style.css")
   body
     header
       nav.navbar
         a.logo(href="/") ProjectManager
         ul.nav-links#auth-links
-          li: a(href="/") Home
-          li: a(href="/projects") Projects
-          li: a(href="/about") About
-          li: a(href="/profile") Profile
+          if !user
+            li: a(href="/login") Login
+            li: a(href="/register") Register
+          else
+            li: a(href="/dashboard") Dashboard
+            li: a(href="/logout") Logout
     main
       block content
     footer
       p &copy; 2024 Project Management Tool. All rights reserved.
   script(src="/javascripts/main.js")
-// Link to the JavaScript that will handle authentication logic

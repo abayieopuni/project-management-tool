@@ -2,17 +2,18 @@ extends layout
 
 block content
   section.register
-    h1 Register
-    form(action="/auth/register" method="POST")
-      div
+    h1 Create an Account
+    form(action="/register" method="POST")
+      div.form-group
         label(for="username") Username
-        input(type="text" name="username" placeholder="Enter your username" required)
-      div
+        input(type="text" name="username" required placeholder="Enter your username")
+      div.form-group
         label(for="email") Email
-        input(type="email" name="email" placeholder="Enter your email" required)
-      div
+        input(type="email" name="email" required placeholder="Enter your email")
+      div.form-group
         label(for="password") Password
-        input(type="password" name="password" placeholder="Create a password" required)
+        input(type="password" name="password" required placeholder="Create a password")
       button(type="submit") Register
     p Already have an account?
-    a(href="/auth/login") Login here
+    a(href="/login") Login here
+

@@ -1,18 +1,13 @@
 extends layout
 
 block content
-  section.intro
-    h1 Welcome to Project Management Tool
+  section.home
+    h1 Welcome to Kolab
     p Manage your projects, tasks, and teams in one place.
-    button(onclick="showCreateProjectModal()") Start a New Project
-
-  // Modal for creating a new project
-  div#projectModal.modal.hidden
-    div.modal-content
-      span.close(onclick="hideCreateProjectModal()") &times;
-      h2 Create a New Project
-      form(action="/projects" method="POST")
-        div.form-group
-          label(for="projectName") Project Name
-          input(type="text" name="projectName" placeholder="Enter Project Name" required)
-        button(type="submit") Create Project
+    if !user
+      p To get started, please log in or register.
+      div.buttons
+        a(href="/login" class="btn btn-primary") Login
+        a(href="/register" class="btn btn-secondary") Register
+    else
+      p Welcome back, #{user.username}! You can start managing your projects.

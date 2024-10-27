@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "sourceMap": true,
-    "outDir": "dist",
-    "lib": ["esnext"],
-    "esModuleInterop": true
-  }
+    "target": "ES6",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true // Helps with file casing issues
+  },
+ 
+  
+  "exclude": ["node_modules"]
 }

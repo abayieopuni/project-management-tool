@@ -2,7 +2,27 @@ extends layout
 
 block content
   section.dashboard
-    h1 Welcome to your Dashboard
-    p Manage your projects and tasks.
-    a(href="/projects") View Projects
-    a(href="/tasks") Manage Tasks
+    h1 Welcome back, #{user.username}!
+    
+    h2 Recent Tasks
+    if tasks && tasks.length > 0
+      div.tasks-container
+        each task in tasks
+          div.task-card
+            h3 #{task.title}
+            p Description: #{task.description}
+            span.status #{task.status}
+            p Due Date: #{task.dueDate}
+    else
+      p You have no recent tasks.
+
+    h2 All Tasks
+    if projects && projects.length > 0
+      div.projects-container
+        each project in projects
+          div.project-card
+            h3 #{project.name}
+            p Description: #{project.description}
+            a(href=`/projects/${project.id}`) View Project
+    else
+      p You have no projects yet.

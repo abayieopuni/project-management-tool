@@ -115,15 +115,68 @@ button[type="submit"]:hover {
   background-color: #135abc;
 }
 
-.login p {
-  margin-top: 10px;
+
+
+
+.home {
+  background-color: #f8f9fa; /* Light background */
+  text-align: center;
+  padding: 50px 20px;
 }
 
-.login a {
-  color: #1a73e8;
-  text-decoration: none;
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.login a:hover {
-  text-decoration: underline;
+.btn-primary {
+  background-color: #007bff; /* Bootstrap Primary */
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Bootstrap Secondary */
+  color: white;
+}
+
+
+.login {
+  background-color: #ffffff; /* White background for contrast */
+  padding: 50px 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  max-width: 400px; /* Limit width */
+  margin: auto; /* Center the form */
+}
+
+.input-field {
+  width: 100%; /* Full width input */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ced4da; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+
+.dashboard {
+  padding: 20px;
+}
+
+.tasks-container, .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task-card, .project-card {
+  background-color: #f8f9fa; /* Light background for cards */
+  border: 1px solid #dee2e6; /* Border around cards */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px;
+  margin: 10px;
+  flex: 1 1 30%; /* Responsive card width */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Soft shadow */
 }
